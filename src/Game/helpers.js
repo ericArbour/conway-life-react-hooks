@@ -55,3 +55,10 @@ export function updateCell(grid, x, y, value) {
     })
   );
 }
+
+export function isGridEmpty(grid) {
+  return !grid.reduce(
+    (total, row) => total + row.reduce((rowTotal, cell) => rowTotal + cell),
+    0
+  );
+}

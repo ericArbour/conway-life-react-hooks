@@ -4,7 +4,8 @@ import {
   findCell,
   countNeighbors,
   computeNextGeneration,
-  updateCell
+  updateCell,
+  isGridEmpty
 } from "./helpers";
 
 describe("isAliveNext", () => {
@@ -188,7 +189,7 @@ describe("computeNextGeneration", () => {
   });
 });
 
-describe("update cell", () => {
+describe("updateCell", () => {
   test("updates as expected", () => {
     expect(updateCell(startingGrid, 1, 1, 1)).toEqual(gridWithOneUpdate);
   });
@@ -200,5 +201,19 @@ describe("update cell", () => {
   });
   test("throws error on invalid update", () => {
     expect(() => updateCell(startingGrid, -1, -1, 0)).toThrowError();
+  });
+});
+
+describe("isGridEmpty", () => {
+  test("empty grid returns true", () => {
+    expect(isGridEmpty(startingGrid)).toBe(true);
+  });
+
+  test("non empty grid returns false", () => {
+    expect(isGridEmpty(filledInGrid)).toBe(false);
+  });
+
+  test("non empty grid returns false", () => {
+    expect(isGridEmpty(nextGenGrid)).toBe(false);
   });
 });
