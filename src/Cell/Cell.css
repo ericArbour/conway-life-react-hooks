@@ -1,0 +1,10 @@
+td {
+  height: 5vmin;
+  width: 5vmin;
+  border: 1px solid #fff;
+}
+
+td.active {
+  background-color: #fff;
+  border: 1px solid #282c34;
+}

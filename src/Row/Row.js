@@ -1,9 +1,9 @@
-import React from "react";
-import Cell from "../Cell/Cell";
+import React from 'react';
+import Cell from '../Cell/Cell';
 
 export default function({ row, y, gridHelpers }) {
   return (
-    <div>
+    <tr>
       {row.map((value, index) => (
         <Cell
           key={index}
@@ -13,6 +13,6 @@ export default function({ row, y, gridHelpers }) {
           gridHelpers={gridHelpers}
         />
       ))}
-    </div>
+    </tr>
   );
 }
