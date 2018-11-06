@@ -1,5 +1,5 @@
 table {
   border-collapse: collapse;
-  max-width: 1000px;
-  max-height: 1000px;
+  width: 80vmin;
+  height: 80vmin;
 }

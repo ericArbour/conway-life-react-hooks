@@ -1,14 +1,18 @@
 .game-control__container {
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
   align-items: flex-end;
-  width: 500px;
+  padding: 10px;
+  max-width: 500px;
 }
 
 .game-control__container button {
   width: 70px;
   height: 25px;
+  margin: 0 10px;
 }
 
 .game-control__container label {
